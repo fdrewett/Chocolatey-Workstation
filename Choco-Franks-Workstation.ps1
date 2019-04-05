@@ -18,6 +18,7 @@ choco install /y winscp
 choco install /y netscan
 choco install /y wireshark
 choco install /y putty
+choco install /y nmap
 
 # Windows utilities
 choco install /y ditto
