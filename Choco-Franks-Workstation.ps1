@@ -8,7 +8,7 @@ $browsers = 0
 $network_utilities = 0
 $windows_utilities = 0
 $office_apps = 0
-$chat = 0
+$chat = 1
 $programming = 0
 $vmware = 0
 $msp_tools = 0
@@ -58,6 +58,7 @@ if ($minimal_install -eq 1) {
     # Chat
     if ($chat -eq 1) {
         choco install /y slack
+        choco install /y whatsapp
         choco install /y microsoft-teams
     }
 
