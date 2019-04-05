@@ -5,45 +5,45 @@ Invoke-Expression ((new-object net.webclient).DownloadString('https://chocolatey
 # install applications#
 #######################
 
-# baseline
-cinst powershell -y
-cinst chocolatey -y
+# Update the baseline apps
+choco upgrade /y powershell
+choco upgrade /y chocolatey
 
 # Browsers
-cinst googlechrome -y
-cinst Firefox -y
+choco install /y googlechrome
+choco install /y Firefox
 
-# network utilities
-cinst winscp -y
-cinst netscan -y
-cinst wireshark -y
-cinst putty -y
+# Network utilities
+choco install /y winscp
+choco install /y netscan
+choco install /y wireshark
+choco install /y putty
 
-#windows utilities
-cinst ditto -y
-cinst 7zip -y
-cinst windirstat -y
-cinst sysinternals -y
-cinst procexp -y
-cinst autoruns -y
-cinst ccleaner -y
-cinst disk2vhd -y
+# Windows utilities
+choco install /y ditto
+choco install /y 7zip
+choco install /y windirstat
+choco install /y sysinternals
+choco install /y procexp
+choco install /y autoruns
+choco install /y ccleaner
+choco install /y disk2vhd
 
 
-# software
-cinst dropbox -y
-cinst vlc -y
-cinst adobereader -y
+# Office apps
+choco install /y dropbox
+choco install /y vlc
+choco install /y adobereader
 
-# chat
-cinst slack -y
-cinst microsoft-teams -y
+# Chat
+choco install /y slack
+choco install /y microsoft-teams
 
-# programming
-cinst python -y
-cinst vscode -y
-cinst autohotkey -y
+# Programming
+choco install /y python
+choco install /y vscode
+choco install /y autohotkey
 
-# vmware
-cinst vmwarevsphereclient -y
+# VMWare
+choco install /y vmwarevsphereclient
 
