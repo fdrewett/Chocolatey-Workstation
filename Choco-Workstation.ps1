@@ -46,6 +46,7 @@ if ($minimal_install -eq 1) {
         choco install /y autoruns
         choco install /y ccleaner
         choco install /y disk2vhd
+        choco install /y sharex
     }
     
     # Office apps
