@@ -3,7 +3,7 @@
 Invoke-Expression ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
 
 # Choose the applications to install
-$minimal_install = 0
+$minimal_install = 1
 $browsers = 0
 $network_utilities = 0
 $windows_utilities = 0
@@ -12,9 +12,13 @@ $chat = 0
 $programming = 0
 $vmware = 0
 $msp_tools = 0
+$malware_tools =0
+
+
 # Update the baseline apps
 choco upgrade /y powershell
 choco upgrade /y chocolatey
+
 
 if ($minimal_install -eq 1) {
     choco install /y googlechrome
@@ -75,11 +79,19 @@ if ($minimal_install -eq 1) {
         choco install /y vmwarevsphereclient 
         choco install /y vmwareworkstation 
     }
+    
     # MSP Tools
     if ($msp_tools -eq 1) {
         choco install /y solarwinds-backup-manager
         choco install /y solarwinds-recovery-console
         choco install /y connectwise
         choco install /y connectwise-manage-client
+    }
+
+    # Malware removal
+    if ($malware_tools -eq 1) {
+        choco install /y adwcleaner
+        choco install /y hitmanpro
+        choco install /y hijackthis
     }
 }
