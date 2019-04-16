@@ -3,14 +3,14 @@
 Invoke-Expression ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
 
 # Choose the applications to install
-$minimal_install = 1
+$minimal_install = 0
 $browsers = 0
 $network_utilities = 0
 $windows_utilities = 0
 $office_apps = 0
 $chat = 0
 $programming = 0
-$vmware = 0
+$vmware = 1
 $msp_tools = 0
 $malware_tools =0
 
@@ -51,11 +51,12 @@ if ($minimal_install -eq 1) {
         choco install /y ccleaner
         choco install /y disk2vhd
         choco install /y sharex
+        choco install /y dropbox
+        choco install /y resilio-sync-home
     }
     
     # Office apps
     if ($office_apps -eq 1) {
-        choco install /y dropbox
         choco install /y vlc
         choco install /y adobereader
     }
