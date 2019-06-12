@@ -4,15 +4,15 @@ Invoke-Expression ((new-object net.webclient).DownloadString('https://chocolatey
 
 # Choose the applications to install
 $minimal_install = 0
-$browsers = 0
-$network_utilities = 0
-$windows_utilities = 0
-$office_apps = 0
-$chat = 0
-$programming = 0
+$browsers = 1
+$network_utilities = 1
+$windows_utilities = 1
+$office_apps = 1
+$chat = 1
+$programming = 1
 $vmware = 1
-$msp_tools = 0
-$malware_tools =0
+$msp_tools = 1
+$malware_tools =1
 
 
 # Update the baseline apps
@@ -66,6 +66,8 @@ if ($minimal_install -eq 1) {
         choco install /y slack
         choco install /y whatsapp
         choco install /y microsoft-teams
+        choco install /y telegram
+
     }
 
     # Programming
@@ -75,10 +77,11 @@ if ($minimal_install -eq 1) {
         choco install /y autohotkey
     }
 
-    # VMWare
+    # VMWare / HyperV
     if ($vmware -eq 1) {
         choco install /y vmwarevsphereclient 
         choco install /y vmwareworkstation 
+        choco install virtualmachineconverter
     }
     
     # MSP Tools
