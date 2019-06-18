@@ -66,6 +66,8 @@ if ($minimal_install -eq 1) {
         choco install /y slack
         choco install /y whatsapp
         choco install /y microsoft-teams
+        choco install /y telegram
+
     }
 
     # Programming
@@ -73,13 +75,13 @@ if ($minimal_install -eq 1) {
         choco install /y python
         choco install /y vscode
         choco install /y autohotkey
-        choco install /y ngrok
     }
 
-    # VMWare
+    # VMWare / HyperV
     if ($vmware -eq 1) {
         choco install /y vmwarevsphereclient 
         choco install /y vmwareworkstation 
+        choco install virtualmachineconverter
     }
     
     # MSP Tools
