@@ -16,84 +16,88 @@ $malware_tools =1
 
 
 # Update the baseline apps
-choco upgrade /y powershell
-choco upgrade /y chocolatey
+choco upgrade -y powershell
+choco upgrade -y powershell-core
+choco upgrade -y chocolatey
 
 
 if ($minimal_install -eq 1) {
-    choco install /y googlechrome
-    choco install /y 7zip
-    choco install /y ccleaner
+    choco install -y googlechrome
+    choco install -y 7zip
+    choco install -y ccleaner
 } else {
    # Browsers
    if ($browsers -eq 1) {
-        choco install /y googlechrome
-        choco install /y Firefox
+        choco install -y googlechrome
+        choco install -y Firefox
    }
 
     # Network utilities
     if ($network_utilities -eq 1) {
-        choco install /y winscp
-        choco install /y netscan
-        choco install /y wireshark
-        choco install /y putty
-        choco install /y nmap
+        choco install -y winscp
+        choco install -y netscan
+        choco install -y wireshark
+        choco install -y putty
+        choco install -y nmap
     }
 
     # Windows utilities
     if ($windows_utilities -eq 1) {
-        choco install /y ditto
-        choco install /y 7zip
-        choco install /y windirstat
-        choco install /y sysinternals
-        choco install /y procexp
-        choco install /y autoruns
-        choco install /y ccleaner
-        choco install /y disk2vhd
-        choco install /y sharex
-        choco install /y dropbox
-        choco install /y resilio-sync-home
+        choco install -y ditto
+        choco install -y 7zip
+        choco install -y windirstat
+        choco install -y sysinternals
+        choco install -y procexp
+        choco install -y autoruns
+        choco install -y ccleaner
+        choco install -y disk2vhd
+        choco install -y sharex
+        choco install -y dropbox
+        # choco install -y resilio-sync-home
     }
     
     # Office apps
     if ($office_apps -eq 1) {
-        choco install /y vlc
-        choco install /y adobereader
+        choco install -y vlc
+        choco install -y adobereader
     }
 
     # Chat
     if ($chat -eq 1) {
-        choco install /y slack
-        choco install /y whatsapp
-        choco install /y microsoft-teams
+        choco install -y slack
+        choco install -y whatsapp
+        # choco install -y microsoft-teams
+        choco install -y telegram
     }
 
     # Programming
     if ($programming -eq 1) {
-        choco install /y python
-        choco install /y vscode
-        choco install /y autohotkey
-        choco install /y ngrok
+        choco install -y python
+        choco install -y vscode
+        choco install -y autohotkey
+        choco install -y ngrok
+        choco install -y github-desktop
     }
 
     # VMWare
     if ($vmware -eq 1) {
-        choco install /y vmwarevsphereclient 
-        choco install /y vmwareworkstation 
+        choco install -y vmwarevsphereclient 
+        choco install -y vmwareworkstation 
     }
     
     # MSP Tools
     if ($msp_tools -eq 1) {
-        choco install /y solarwinds-backup-manager
-        choco install /y solarwinds-recovery-console
-        choco install /y connectwise
-        choco install /y connectwise-manage-client
+        choco install -y solarwinds-backup-manager
+        choco install -y solarwinds-recovery-console
+        # choco install -y connectwise
+        # choco install -y connectwise-manage-client
     }
 
     # Malware removal
     if ($malware_tools -eq 1) {
-        choco install /y adwcleaner
-        choco install /y hitmanpro
-        choco install /y hijackthis
+        choco install -y adwcleaner
+        # choco install -y hitmanpro
+        # choco install -y hijackthis
+        choco install -y glaryutilities-free
     }
 }
