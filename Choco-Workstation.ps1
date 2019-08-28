@@ -3,7 +3,7 @@
 Invoke-Expression ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
 
 # Choose the applications to install
-$minimal_install = 0
+$minimal_install = 1
 $browsers = 1
 $network_utilities = 1
 $windows_utilities = 1
@@ -20,7 +20,7 @@ choco upgrade -y powershell
 choco upgrade -y powershell-core
 choco upgrade -y chocolatey
 
-
+# Minimal install apps
 if ($minimal_install -eq 1) {
     choco install -y googlechrome
     choco install -y 7zip
