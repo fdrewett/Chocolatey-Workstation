@@ -53,6 +53,8 @@ if ($minimal_install -eq 1) {
         choco install -y disk2vhd
         choco install -y sharex
         choco install -y dropbox
+        choco install -y rufus
+        choco install -y etcher
         # choco install -y resilio-sync-home
     }
     
