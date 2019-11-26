@@ -55,6 +55,7 @@ if ($minimal_install -eq 1) {
         choco install -y dropbox
         choco install -y rufus
         choco install -y etcher
+        choco install -y authy-desktop
         # choco install -y resilio-sync-home
     }
     
