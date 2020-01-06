@@ -3,16 +3,16 @@
 Invoke-Expression ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
 
 # Choose the applications to install
-$minimal_install = 1
+$minimal_install = 0
 $browsers = 1
 $network_utilities = 1
 $windows_utilities = 1
 $office_apps = 1
 $chat = 1
 $programming = 1
-$vmware = 1
-$msp_tools = 1
-$malware_tools =1
+$vmware = 0
+$msp_tools = 0
+$malware_tools = 0
 
 
 # Update the baseline apps
