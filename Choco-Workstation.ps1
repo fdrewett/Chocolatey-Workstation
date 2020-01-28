@@ -10,9 +10,10 @@ $windows_utilities = 1
 $office_apps = 1
 $chat = 1
 $programming = 1
-$vmware = 0
-$msp_tools = 0
-$malware_tools = 0
+$vmware = 1
+$msp_tools = 1
+$malware_tools = 1
+$rarely_used = 0
 
 
 # Update the baseline apps
@@ -56,7 +57,7 @@ if ($minimal_install -eq 1) {
         choco install -y rufus
         choco install -y etcher
         choco install -y authy-desktop
-        # choco install -y resilio-sync-home
+        choco install -y resilio-sync-home
     }
     
     # Office apps
@@ -68,11 +69,10 @@ if ($minimal_install -eq 1) {
     # Chat
     if ($chat -eq 1) {
         choco install -y slack
-        choco install -y whatsapp
-        # choco install -y microsoft-teams
+        choco install -y microsoft-teams
         choco install -y telegram
     }
-
+    
     # Programming
     if ($programming -eq 1) {
         choco install -y python
@@ -82,7 +82,7 @@ if ($minimal_install -eq 1) {
         choco install -y github-desktop
         choco install -y git
     }
-
+    
     # VMWare
     if ($vmware -eq 1) {
         choco install -y vmwarevsphereclient 
@@ -93,15 +93,21 @@ if ($minimal_install -eq 1) {
     if ($msp_tools -eq 1) {
         choco install -y solarwinds-backup-manager
         choco install -y solarwinds-recovery-console
-        # choco install -y connectwise
-        # choco install -y connectwise-manage-client
     }
-
+    
     # Malware removal
     if ($malware_tools -eq 1) {
         choco install -y adwcleaner
-        # choco install -y hitmanpro
-        # choco install -y hijackthis
+        choco install -y hijackthis
+    }
+    
+    # rarely used
+    if ($rarely_used -eq 1) {
         choco install -y glaryutilities-free
+        choco install -y hitmanpro
+        choco install -y connectwise
+        choco install -y connectwise-manage-client
+        choco install -y whatsapp
+        
     }
 }
