@@ -80,6 +80,7 @@ if ($minimal_install -eq 1) {
         choco install -y autohotkey
         choco install -y ngrok
         choco install -y github-desktop
+        choco install -y git
     }
 
     # VMWare
