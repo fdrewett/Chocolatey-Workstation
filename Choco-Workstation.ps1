@@ -81,6 +81,9 @@ if ($minimal_install -eq 1) {
         choco install -y ngrok
         choco install -y github-desktop
         choco install -y git
+        choco install -y hackfont
+        choco install -y sourcecodepro
+        choco install -y firacode
     }
     
     # VMWare
