@@ -30,21 +30,18 @@ if ($minimal_install -eq 1) {
    # Browsers
    if ($browsers -eq 1) {
         choco install -y googlechrome
-        choco install -y Firefox
-   }
-
+    }
+    
     # Network utilities
     if ($network_utilities -eq 1) {
         choco install -y winscp
-        choco install -y netscan
         choco install -y wireshark
         choco install -y putty
         choco install -y nmap
     }
-
+    
     # Windows utilities
     if ($windows_utilities -eq 1) {
-        choco install -y ditto
         choco install -y 7zip
         choco install -y windirstat
         choco install -y sysinternals
@@ -53,10 +50,8 @@ if ($minimal_install -eq 1) {
         choco install -y ccleaner
         choco install -y disk2vhd
         choco install -y sharex
-        choco install -y dropbox
         choco install -y rufus
         choco install -y etcher
-        choco install -y authy-desktop
         choco install -y resilio-sync-home
     }
     
@@ -65,14 +60,14 @@ if ($minimal_install -eq 1) {
         choco install -y vlc
         choco install -y adobereader
     }
-
+    
     # Chat
     if ($chat -eq 1) {
         choco install -y slack
         choco install -y microsoft-teams
         choco install -y telegram
     }
-    
+    0
     # Programming
     if ($programming -eq 1) {
         choco install -y python
@@ -89,7 +84,6 @@ if ($minimal_install -eq 1) {
     # VMWare
     if ($vmware -eq 1) {
         choco install -y vmwarevsphereclient 
-        choco install -y vmwareworkstation 
     }
     
     # MSP Tools
@@ -111,6 +105,12 @@ if ($minimal_install -eq 1) {
         choco install -y connectwise
         choco install -y connectwise-manage-client
         choco install -y whatsapp
+        # choco install -y authy-desktop
+        # choco install -y Firefox
+        # choco install -y ditto
+        # choco install -y vmwareworkstation 
+        # choco install -y dropbox
+        # choco install -y netscan
         
     }
 }
