@@ -3,16 +3,16 @@
 Invoke-Expression ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
 
 # Choose the applications to install
-$minimal_install = 0
-$browsers = 1
-$network_utilities = 1
-$windows_utilities = 1
-$office_apps = 1
-$chat = 1
-$programming = 1
-$vmware = 1
-$msp_tools = 1
-$malware_tools = 1
+$minimal_install = 1
+$browsers = 0
+$network_utilities = 0
+$windows_utilities = 0
+$office_apps = 0
+$chat = 0
+$programming = 0
+$vmware = 0
+$msp_tools = 0
+$malware_tools = 0
 $rarely_used = 0
 
 
@@ -105,12 +105,12 @@ if ($minimal_install -eq 1) {
         choco install -y connectwise
         choco install -y connectwise-manage-client
         choco install -y whatsapp
-        # choco install -y authy-desktop
-        # choco install -y Firefox
-        # choco install -y ditto
-        # choco install -y vmwareworkstation 
-        # choco install -y dropbox
-        # choco install -y netscan
+        choco install -y authy-desktop
+        choco install -y Firefox
+        choco install -y ditto
+        choco install -y vmwareworkstation 
+        choco install -y dropbox
+        choco install -y netscan
         
     }
 }
