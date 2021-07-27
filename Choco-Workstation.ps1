@@ -1,4 +1,5 @@
-﻿Set-ExecutionPolicy Unrestricted
+﻿# set the execution policy to unrestricted
+Set-ExecutionPolicy Unrestricted
 # chocolatey install
 Invoke-Expression ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
 
