@@ -3,14 +3,17 @@ Set-ExecutionPolicy Unrestricted
 # chocolatey install
 Invoke-Expression ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
 
+
+
 # Choose the applications to install
-$minimal_install = 1
-$browsers = 0
-$network_utilities = 0
-$windows_utilities = 0
-$office_apps = 0
-$chat = 0
-$programming = 0
+$minimal_install = 0
+$browsers = 1
+$network_utilities = 1
+$gaming = 1
+$windows_utilities = 1
+$office_apps = 1
+$chat = 1
+$programming = 1
 $vmware = 0
 $msp_tools = 0
 $malware_tools = 0
@@ -28,15 +31,15 @@ if ($minimal_install -eq 1) {
     choco install -y 7zip
     choco install -y ccleaner
 } else {
-   # Browsers
-   if ($browsers -eq 1) {
+    # Browsers
+    if ($browsers -eq 1) {
         choco install -y googlechrome
+        choco install -y Firefox
     }
     
     # Network utilities
     if ($network_utilities -eq 1) {
         choco install -y winscp
-        choco install -y wireshark
         choco install -y putty
         choco install -y nmap
     }
@@ -50,30 +53,32 @@ if ($minimal_install -eq 1) {
         choco install -y autoruns
         choco install -y ccleaner
         choco install -y disk2vhd
-        choco install -y sharex
         choco install -y rufus
         choco install -y etcher
-        choco install -y resilio-sync-home
     }
     
     # Office apps
     if ($office_apps -eq 1) {
-        choco install -y vlc
         choco install -y adobereader
     }
+    
+    # gaming
+    if ($gaming -eq 1) {
+        choco install -y steam
+        choco install -y nvidia-geforce-now
+    }
+
     
     # Chat
     if ($chat -eq 1) {
         choco install -y slack
         choco install -y microsoft-teams
-        choco install -y telegram
     }
     0
     # Programming
     if ($programming -eq 1) {
         choco install -y python
         choco install -y vscode
-        choco install -y autohotkey
         choco install -y ngrok
         choco install -y github-desktop
         choco install -y git
@@ -107,11 +112,16 @@ if ($minimal_install -eq 1) {
         choco install -y connectwise-manage-client
         choco install -y whatsapp
         choco install -y authy-desktop
-        choco install -y Firefox
         choco install -y ditto
         choco install -y vmwareworkstation 
         choco install -y dropbox
         choco install -y netscan
+        choco install -y autohotkey
+        choco install -y telegram
+        choco install -y vlc
+        choco install -y wireshark
+        choco install -y sharex
+        choco install -y resilio-sync-home
         
     }
 }
